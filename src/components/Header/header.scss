@@ -44,7 +44,7 @@
             position: relative;
             background: none;
             border: none;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             width: 80px;
             margin-left: 1rem;
 
@@ -59,27 +59,35 @@
                 height: 3px;
                 background: #fff;
                 margin: 0;
+                transition: .3s;
 
-                &:before {
-                    position: absolute;
-                    top: 10px;
-                    display: block;
-                    content: "";
-                    width: 50px;
-                    height: 3px;
-                    background: #fff;
+                &:first-child {
+                    margin-bottom: 7px;
                 }
 
-                &:after {
-                    position: absolute;
-                    bottom: 10px;
-                    display: block;
-                    content: "";
-                    width: 50px;
-                    height: 3px;
-                    background: #fff;
+                &:last-child {
+                    margin-top: 7px;
                 }
            }
+
+           .menu-btn_dash--active:first-child {
+               display: none;
+           }
+
+           .menu-btn_dash--active {
+               position: absolute;
+               width: 40px;
+               transform: rotate(45deg);
+               margin: 0;
+               bottom: 5px;
+           }
+           .menu-btn_dash--active:last-child {
+            position: absolute;
+            transform: rotate(-45deg);
+            margin: 0;
+            bottom: 5px;
+            
+        }
         }
         
         @media (max-width: 768px){

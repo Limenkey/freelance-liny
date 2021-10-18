@@ -17,13 +17,17 @@ const MobileMenu = () => {
   const onClick = () => {
       !visible ? showDrawer() : onClose()
   }
+
+  const menuStatus = visible && 'menu-btn_dash--active'
   return (
     <>
       <button type="button" onClick={()=> onClick()}>
-        <div className={`menu-btn_dash`}></div>
+        <div className={`menu-btn_dash ${menuStatus}`}></div>
+        <div className={`menu-btn_dash ${menuStatus}`}></div>
+        <div className={`menu-btn_dash ${menuStatus}`}></div>
       </button>
       <Drawer title="Genres" placement="right" onClose={onClose} visible={visible} className="menu-drawer">
-        <Filters/>
+        <Filters clicked={onClick}/>
         <div className="socials-container-menu">
           <a href="https://wa.me/79508078587" target="_blank" rel="noreferrer">
               <img src="/images/icons/whatsapp.svg" alt="WhatsApp"/>

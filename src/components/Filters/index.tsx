@@ -5,7 +5,7 @@ import { filterSeries } from '../App/appSlice'
 import './filters.scss'
 
 
-const Filters = ({filter, filterSeries}:any) => {
+const Filters = ({filter, filterSeries, clicked}:any) => {
     const all = 'all'
     const beauty = 'beauty'
     const lookbook = 'lookbook'
@@ -17,22 +17,69 @@ const Filters = ({filter, filterSeries}:any) => {
     return (
         <ul className='filters'>
                 <li>
-                    <button className={(filter === all && active) || ''} type="button" onClick={() => filterSeries('all')}>All</button>       
+                    <button 
+                        className={(filter === all && active) || ''} 
+                        type="button" 
+                        onClick={() => {
+                            filterSeries('all')
+                            clicked()
+                            }}>
+                        All
+                    </button>       
                 </li>
                 <li>
-                    <button className={(filter === beauty && active) || ''} type="button" onClick={() => filterSeries('beauty')}>Beauty</button>
+                    <button 
+                        className={(filter === beauty && active) || ''} 
+                        type="button" 
+                        onClick={() => {
+                            filterSeries('beauty')
+                            clicked()
+                            }}>
+                    Beauty
+                    </button>
                 </li>
                 <li>
-                    <button className={(filter === lookbook && active) || ''} type="button" onClick={() => filterSeries('lookbook')}>Lookbook</button>
+                    <button
+                        className={(filter === lookbook && active) || ''} 
+                        type="button" onClick={() => {
+                            filterSeries('lookbook')
+                            clicked()
+                            }}>
+                    Lookbook
+                    </button>
                 </li>
                 <li>
-                    <button className={(filter === modeltests && active) || ''} type="button" onClick={() => filterSeries('modeltests')}>Model tests</button>
+                    <button 
+                        className={(filter === modeltests && active) || ''} 
+                        type="button" 
+                        onClick={() => {
+                            filterSeries('modeltests')
+                            clicked()
+                            }}>
+                    Model tests
+                    </button>
                 </li>
                 <li>
-                    <button className={(filter === items && active) || ''} type="button" onClick={() => filterSeries('items')}>Items</button>
+                    <button 
+                        className={(filter === items && active) || ''} 
+                        type="button" 
+                        onClick={() => {
+                            filterSeries('items')
+                            clicked()
+                            }}>
+                    Items
+                    </button>
                 </li>
                 <li>
-                    <button className={(filter === catalog && active) || ''} type="button" onClick={() => filterSeries('catalog')}>Catalogue</button>
+                    <button 
+                        className={(filter === catalog && active) || ''} 
+                        type="button" 
+                        onClick={() => {
+                            filterSeries('catalog')
+                            clicked()
+                            }}>
+                    Catalogue
+                    </button>
                 </li>
             </ul>
     )
