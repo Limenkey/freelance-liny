@@ -1,0 +1,23 @@
+html, body {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Crimson Text', serif;
+    scroll-behavior: smooth;
+    background: #e5e5e5;
+}
+
+h1, h2, h3 {
+    color: #fff;
+}
+
+#root section .header {
+    height: 100px;
+}
+
+.container {
+    width: 100vw;
+}
+
+.ant-layout-content {
+    background: #e5e5e5;
+}
