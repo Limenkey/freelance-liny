@@ -5,7 +5,8 @@
     position: fixed;
     bottom: 0;
     background: #000;
-    height: 100px;
+    height: 10vh;
+
 
     @media (max-width: 768px) {
         display: none;
@@ -18,12 +19,14 @@
             display: block;
             margin: 0;
             color: #fff;
-            line-height: 1rem;
+            font-size: .75vw;
+            line-height: .80vw;
         }   
     }
 
     .filters-btn {
         margin-left: 10%;
+        font-size: 1vw;
     }
 
     a {
