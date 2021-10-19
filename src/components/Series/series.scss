@@ -28,6 +28,10 @@
 .wide-img {
     max-width: 80%;
     max-height: 100%;
+
+    @media (max-width: 420px) {
+        max-height: 200px;
+    }
 }
 
 

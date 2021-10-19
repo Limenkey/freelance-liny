@@ -7,7 +7,7 @@ ul {
 
     li {
         display: flex;
-        font-size: 1vw;
+        font-size: 1.7rem;
         font-weight: bold;
         margin-right: 1rem;
         overflow-y: hidden;
@@ -17,7 +17,7 @@ ul {
             color: #fff;
             font-weight: bold;
             cursor: pointer;
-            transition: .3s;
+            transition: .3s;    
         }
 
         button:hover {

@@ -19,10 +19,6 @@
         line-height: 3.5vh;
         margin-bottom: 0rem;
         overflow-y: hidden;
-
-        @media (max-width: 768px) {
-            font-size: 2rem;
-        }
         
     }
 
@@ -48,7 +44,7 @@
             width: 80px;
             margin-left: 1rem;
 
-            @media (min-width: 769px) {
+            @media (min-width: 1025px) {
                 display: none;
             }
            
@@ -111,11 +107,17 @@
         margin-right: 7%;
         overflow-y: hidden;
         
+        @media (max-width: 1024px) {
+            margin-right: 2%;
+        }
+
         @media (max-width: 768px) {
             margin-right: 0;
             margin-left: 2rem;
             width: 80px;
         }
+
+
 
 
         img {
@@ -132,7 +134,7 @@
                 display: block;
                 margin: 0 auto 10px auto;
 
-                @media (min-width: 768px) {
+                @media (min-width: 1024px) {
                     display: none;
                 }
             }
@@ -140,7 +142,7 @@
         
         .socials-container {
             width: 100%;
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
                 display: none;
             }
         }
