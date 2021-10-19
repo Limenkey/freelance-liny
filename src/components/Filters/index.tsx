@@ -5,7 +5,7 @@ import { filterSeries } from '../App/appSlice'
 import './filters.scss'
 
 
-const Filters = ({filter, filterSeries, clicked}:any) => {
+const Filters = ({filter, filterSeries, clicked, mobile}:any) => {
     const all = 'all'
     const beauty = 'beauty'
     const lookbook = 'lookbook'
@@ -22,7 +22,7 @@ const Filters = ({filter, filterSeries, clicked}:any) => {
                         type="button" 
                         onClick={() => {
                             filterSeries('all')
-                            clicked()
+                            if (mobile) clicked()
                             }}>
                         All
                     </button>       
@@ -33,7 +33,7 @@ const Filters = ({filter, filterSeries, clicked}:any) => {
                         type="button" 
                         onClick={() => {
                             filterSeries('beauty')
-                            clicked()
+                            if (mobile) clicked()
                             }}>
                     Beauty
                     </button>
@@ -43,7 +43,7 @@ const Filters = ({filter, filterSeries, clicked}:any) => {
                         className={(filter === lookbook && active) || ''} 
                         type="button" onClick={() => {
                             filterSeries('lookbook')
-                            clicked()
+                            if (mobile) clicked()
                             }}>
                     Lookbook
                     </button>
@@ -54,7 +54,7 @@ const Filters = ({filter, filterSeries, clicked}:any) => {
                         type="button" 
                         onClick={() => {
                             filterSeries('modeltests')
-                            clicked()
+                            if (mobile) clicked()
                             }}>
                     Model tests
                     </button>
@@ -65,7 +65,7 @@ const Filters = ({filter, filterSeries, clicked}:any) => {
                         type="button" 
                         onClick={() => {
                             filterSeries('items')
-                            clicked()
+                            if (mobile) clicked()
                             }}>
                     Items
                     </button>
@@ -76,7 +76,7 @@ const Filters = ({filter, filterSeries, clicked}:any) => {
                         type="button" 
                         onClick={() => {
                             filterSeries('catalog')
-                            clicked()
+                            if (mobile) clicked()
                             }}>
                     Catalogue
                     </button>

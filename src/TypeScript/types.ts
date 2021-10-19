@@ -3,7 +3,7 @@ export interface series {
     genre: null | string,
     titleImg: string,
     images: string[],
-    wideImages?: string[],
+    wideImages: string[],
 }
 
 export interface appState {

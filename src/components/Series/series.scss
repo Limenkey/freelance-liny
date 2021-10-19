@@ -1,18 +1,28 @@
 .ant-image-preview-wrap {
-    margin-top: 100px;
-    margin-bottom: 60px;
+    z-index: 11111111111111111;
+}
+.ant-image-preview-mask {
+    z-index: 11111111111111111;
 }
 
 .ant-image-preview-img {
     max-height: 90%;
+    transform: none !important;
 }
 
 .ant-image {
     margin: .25rem;
-    height: fit-content;
 }
 .ant-image-img {
     max-width: 328px;
+}
+
+.ant-image-preview-operations-operation {
+    display: none;
+
+    &:first-child {
+        display: flex;
+    }
 }
 
 .wide-img {
@@ -22,6 +32,6 @@
 
 
 .ant-image-preview-mask {
-    background-color: rgba(0, 0, 0, 0.90);
+    background-color: rgba(0, 0, 0, .95);
 }
 

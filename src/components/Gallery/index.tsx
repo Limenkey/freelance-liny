@@ -19,7 +19,11 @@ const Gallery = ({images, filter, openPage, opened}:any) => {
         })
     }, [])
 
-    const galleryImages = images.map((series: series) => {  
+    const galleryImages = images.map((series: series) => {
+        const imagesCounter = 
+            series.wideImages[0] ? 
+                series.images.length + series.wideImages.length : 
+                    series.images.length   
         if (filter === 'all' || filter === series.genre) {
             return (
                 <Link 
@@ -39,6 +43,7 @@ const Gallery = ({images, filter, openPage, opened}:any) => {
                 >
                     <div className="img-container">
                         <img src={series.titleImg} alt="Title photo for the series"/>
+                        <div className="images-counter">{`1/${imagesCounter}`}</div>
                     </div>
                 </Link>
             )
